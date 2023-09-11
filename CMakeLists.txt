@@ -29,16 +29,16 @@ find_package(pcbf_msgs REQUIRED)
 
 include_directories(${EIGEN3_INCLUDE_DIR})
 
-add_executable(talker src/publisher_member_function.cpp)
-ament_target_dependencies(talker rclcpp std_msgs)
-add_executable(listener src/subscriber_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs)
-add_executable(joy2accref src/joy2ref.cpp)
+#add_executable(talker src/publisher_member_function.cpp)
+#ament_target_dependencies(talker rclcpp std_msgs)
+#add_executable(listener src/subscriber_member_function.cpp)
+#ament_target_dependencies(listener rclcpp std_msgs)
+add_executable(joy2accref joy2ref.cpp)
 ament_target_dependencies(joy2accref rclcpp std_msgs sensor_msgs pcbf_msgs)
 
 install(TARGETS
-  talker
-  listener
+	#  talker
+	#  listener
   joy2accref
   DESTINATION lib/joy2accref)
 
